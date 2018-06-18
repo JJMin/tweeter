@@ -1,0 +1,22 @@
+{
+  "name": "tweeter",
+  "version": "1.0.0",
+  "description": "Tweeter is a full-stack single page application that is an AJAX-based Twitter clone built with HTML, CSS, jQuery, JavaScript, and AJAX on the front-end, and Express, Node, and MongoDB on the back-end.",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/index.js",
+    "local": "./node_modules/.bin/nodemon --watch server -e js server/index.js"
+  },
+  "author": "Eric Jae-Min Joo",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "chance": "^1.0.2",
+    "express": "^4.13.4",
+    "md5": "^2.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.2"
+  }
+}
