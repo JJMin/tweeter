@@ -1,33 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
 
-    <!-- External JS -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/app.js"></script>
-  </head>
+  <!-- External JS -->
+  <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
-  <body>
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/app.js"></script>
 
-    <!-- Top nav bar (fixed) -->
-    <nav id="nav-bar">
-      <img class="logo" src="/images/bird.png" width="80px" height="80px">
-      <span class="header">Tweeter</span>
-    </nav>
+  <!-- External Font -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:500|Open+Sans:400,400i,700" rel="stylesheet">
+</head>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-    </main>
+<body>
 
-  </body>
+  <!-- Top nav bar (fixed) -->
+  <nav class="navbar fixed-top">
+    <a class="navbar-brand" href="#">
+      <img src="/images/bird.png" alt="Tweeter logo">
+      Tweeter
+    </a>
+  </nav>
+
+  <!-- Page-specific (main) content here -->
+  <main>
+    <div class="container">
+      <form method="POST" action="/tweets/" class="border rounded">
+        <div class="form-group">
+          <label for="tweet">Compose Tweet</label>
+          <hr>
+          <textarea class="form-control" id="tweet" placeholder="What are you humming about?"></textarea>
+        </div>
+        <div class="row justify-content-between">
+          <div class="col-4">
+            <button type="submit" class="btn btn-primary">Tweet</button>
+          </div>
+          <div class="col-2">
+            <p id="character-count">140</p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
