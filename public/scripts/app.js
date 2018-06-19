@@ -63,6 +63,7 @@ $(document).ready(function () {
   $(".new_tweet form").submit(function (event) {
     event.preventDefault();
     $(this).serialize();
-    loadTweets();
   });
+
+  loadTweets();
 });
