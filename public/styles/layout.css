@@ -44,7 +44,7 @@ body {
 /*
  * Main
  */
-main .container{
+main .new_tweet{
   width: 450px;
   margin-top: 80px;
   background-color: white;
@@ -75,12 +75,19 @@ form .form-control {
 /*
  * Article
  */
+.tweets {
+  width: 480px;
+}
+.tweet {
+  margin: 25px 0;
+}
 .tweet header {
   background-color: rgb(243, 243, 243);
   padding: 7px 14px;
 }
 .tweet img {
   height: 50px;
+  padding-left: 7px;
 } 
 .tweet .col-3 {
   padding-top: 10px;
