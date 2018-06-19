@@ -53,7 +53,7 @@ const data = [{
 
 function createTweetElement(tweetData) {
   return tweetElement =
-  `<div class="tweet border rounded">
+    `<div class="tweet border rounded">
     <header class="rounded-top">
       <div class="d-flex justify-content-between">
         <div class="align-self-center">
@@ -92,4 +92,9 @@ function renderTweets(tweets) {
 
 $(document).ready(function () {
   renderTweets(data);
+
+  $(".btn").click(function (event) {
+    event.preventDefault();
+    console.log($('#new_tweet').serialize());
+  });
 });
