@@ -16,7 +16,7 @@ html {
 body {
   margin: 0;
   color: #244751;
-  background-color: #eee;
+  background-color: rgb(255, 255, 255);
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
 }
@@ -48,7 +48,7 @@ main .container{
   width: 450px;
   margin-top: 80px;
   background-color: white;
-  padding: 100px 20px;
+  padding: 30px 20px;
 }
 form {
   padding: 20px;
@@ -70,4 +70,41 @@ form .form-control {
   font-size: 15px;
   font-style: italic;
   padding-top: 7px;
+}
+
+/*
+ * Article
+ */
+article .container {
+  padding: 4px 20px 2px 20px;
+}
+.tweet header {
+  background-color: rgb(241, 241, 241);
+  padding: 7px 10px;
+  margin: -4px -20px;
+}
+.tweet img {
+  height: 50px;
+} 
+.tweet .col-3 {
+  padding-top: 10px;
+}
+.tweet #tweet_text {
+  padding: 35px 0;
+}
+footer p {
+  font-size: 14px;
+  color: #616161;
+}
+footer .icons {
+  font-size: 16px;
+  color: #00a087;
+}
+footer .icons i {
+  opacity: 0;
+  transition: opacity 0.1s linear;
+  padding: 0 2px;
+}
+.tweet:hover footer .icons i {
+  opacity: 1;
 }

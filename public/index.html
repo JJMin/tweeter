@@ -7,6 +7,7 @@
 
   <!-- External CSS -->
   <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+  <link rel="stylesheet" href="/vendor/webfonts/fontawesome-all.min.css" type="text/css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
 
@@ -14,10 +15,16 @@
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
   <!-- External JS -->
-  <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/app.js"></script>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
   <!-- External Font -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:500|Open+Sans:400,400i,700" rel="stylesheet">
@@ -28,8 +35,7 @@
   <!-- Top nav bar (fixed) -->
   <nav class="navbar fixed-top">
     <a class="navbar-brand" href="#">
-      <img src="/images/bird.png" alt="Tweeter logo">
-      Tweeter
+      <img src="/images/bird.png" alt="Tweeter logo"> Tweeter
     </a>
   </nav>
 
@@ -38,9 +44,9 @@
     <div class="container">
       <form method="POST" action="/tweets/" class="border rounded">
         <div class="form-group">
-          <label for="tweet">Compose Tweet</label>
+          <label for="new_tweet">Compose Tweet</label>
           <hr>
-          <textarea class="form-control" id="tweet" placeholder="What are you humming about?"></textarea>
+          <textarea class="form-control" id="new_tweet" placeholder="What are you humming about?"></textarea>
         </div>
         <div class="row justify-content-between">
           <div class="col-4">
@@ -52,14 +58,39 @@
         </div>
       </form>
     </div>
-  </main>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
+    <article>
+      <div class="container tweet border rounded">
+        <header class="rounded-top">
+          <div class="row justify-content-between">
+            <div class="col-5">
+              <img src="/images/bird.png" alt="Tweeter logo"> Bill Fields
+            </div>
+            <div class="col-3">
+              @MrFields
+            </div>
+          </div>
+        </header>
+
+        <p id="tweet_text">Little tweet here</p>
+        <hr>
+
+        <footer>
+          <div class="row justify-content-between">
+            <div class="col-3">
+              <p>10 days ago</p>
+            </div>
+            <div class="col-3 icons">
+              <i class="fal fa-flag"></i>
+              <i class="far fa-retweet-alt"></i>
+              <i class="fal fa-heart"></i>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </article>
+    </div>
+  </main>
 </body>
 
 </html>
