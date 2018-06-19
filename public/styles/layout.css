@@ -48,13 +48,13 @@ main .container{
   width: 450px;
   margin-top: 80px;
   background-color: white;
-  padding: 30px 20px;
+  padding: 30px 15px;
 }
 form {
   padding: 20px;
-  background-color: #eee;
+  background-color: rgb(238, 238, 238);
 }
-hr {
+main hr {
   padding: 0px;
   margin: -3px 0 22px 0;
 }
@@ -75,13 +75,9 @@ form .form-control {
 /*
  * Article
  */
-article .container {
-  padding: 4px 20px 2px 20px;
-}
 .tweet header {
-  background-color: rgb(241, 241, 241);
-  padding: 7px 10px;
-  margin: -4px -20px;
+  background-color: rgb(243, 243, 243);
+  padding: 7px 14px;
 }
 .tweet img {
   height: 50px;
@@ -90,11 +86,16 @@ article .container {
   padding-top: 10px;
 }
 .tweet #tweet_text {
-  padding: 35px 0;
+  padding: 35px 14px;
+}
+article hr {
+  padding: 0;
+  margin: 0;
 }
 footer p {
-  font-size: 14px;
+  font-size: 13px;
   color: #616161;
+  margin-left: 9px;
 }
 footer .icons {
   font-size: 16px;
