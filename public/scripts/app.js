@@ -86,13 +86,10 @@ $(document).ready(function () {
 
   $("#compose").click(function (event) {
     event.preventDefault();
-    //$(".new_tweet_container").css("overflow", "visible");
     $(".new_tweet_container").slideToggle(function () {
       if ($(this).is(':hidden')) {
-        $(".tweets").css("margin-top", "100px");
       } else {
         $("#new_tweet").focus();
-        $(".tweets").css("margin-top", "0");
       }
     });
   });

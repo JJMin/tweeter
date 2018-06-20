@@ -47,14 +47,18 @@ nav form button .fa-edit {
   margin-right: 7px;
 }
 
+.whitespace {
+  height: 80px;
+}
+
 /*
  * Main
  */
 main .new_tweet_container{
   width: 450px;
-  margin-top: 80px;
+  margin-top: 30px;
   background-color: white;
-  padding: 30px 15px;
+  padding: 0 15px;
 }
 form {
   padding: 20px;
