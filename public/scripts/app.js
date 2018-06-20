@@ -50,13 +50,13 @@ $(document).ready(function () {
       })
       .done((tweets) => {
         renderTweets(tweets);
-        console.log("Rendering tweets");
+        console.log("Rendering + loading tweets");
       })
       .fail((error) => {
         console.log("Error!");
       })
       .always(() => {
-        console.log("Function complete.");
+        console.log("loadTweets function complete.");
       });
   };
 
@@ -68,12 +68,13 @@ $(document).ready(function () {
       })
       .done((newTweet) => {
         $('.tweets').prepend(createTweetElement(newTweet));
+        console.log("Prepend new tweet.");
       })
       .fail((error) => {
         console.log("Error!");
       })
       .always(() => {
-        console.log("Function complete.");
+        console.log("sendTweet function complete.");
       });
   };
 
