@@ -104,6 +104,7 @@ form .form-control {
 }
 .tweet #tweet_text {
   padding: 35px 14px;
+  word-wrap: break-word;
 }
 article hr {
   padding: 0;
