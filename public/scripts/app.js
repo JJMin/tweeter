@@ -3,6 +3,12 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+function escape(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 function createTweetElement(tweetData) {
   return tweetElement =
     `<div class="tweet border rounded">
@@ -18,7 +24,7 @@ function createTweetElement(tweetData) {
       </div>
     </header>
 
-    <p id="tweet_text">${tweetData.content.text}</p>
+    <p id="tweet_text">${escape(tweetData.content.text)}</p>
     <hr>
 
     <footer>
@@ -81,7 +87,7 @@ $(document).ready(function () {
   $("#compose").click(function (event) {
     event.preventDefault();
     //$(".new_tweet_container").css("overflow", "visible");
-    $(".new_tweet_container").slideToggle(function() {
+    $(".new_tweet_container").slideToggle(function () {
       if ($(this).is(':hidden')) {
         $(".tweets").css("margin-top", "100px");
       } else {
