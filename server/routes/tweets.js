@@ -42,7 +42,7 @@ module.exports = function (DataHelpers) {
           error: err.message
         });
       } else {
-        res.status(201).send();
+        res.status(201).json(tweet);
       }
     });
   });

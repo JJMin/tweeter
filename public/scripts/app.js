@@ -36,24 +36,20 @@ function createTweetElement(tweetData) {
   </div>`;
 }
 
-function renderTweets(tweets, newTweet) {
-  if (newTweet) {
-    $('.tweets').prepend(createTweetElement(tweets[tweets.length - 1]));
-  } else if (!newTweet) {
-    tweets.forEach(tweet => {
-      $('.tweets').prepend(createTweetElement(tweet));
-    });
-  }
+function renderTweets(tweets) {
+  tweets.forEach(tweet => {
+    $('.tweets').prepend(createTweetElement(tweet));
+  });
 }
 
 $(document).ready(function () {
-  function loadTweets(newTweet) {
+  function loadTweets() {
     $.ajax({
         url: '/tweets',
         method: 'GET'
       })
       .done((tweets) => {
-        renderTweets(tweets, newTweet);
+        renderTweets(tweets);
         console.log("Rendering tweets");
       })
       .fail((error) => {
@@ -70,9 +66,8 @@ $(document).ready(function () {
         method: 'POST',
         data: tweet
       })
-      .done(() => {
-        loadTweets(newTweet = true);
-        console.log("Loading tweets");
+      .done((newTweet) => {
+        $('.tweets').prepend(createTweetElement(newTweet));
       })
       .fail((error) => {
         console.log("Error!");
@@ -106,5 +101,5 @@ $(document).ready(function () {
     event.preventDefault();
   });
 
-  loadTweets(newTweet = false);
+  loadTweets();
 });
