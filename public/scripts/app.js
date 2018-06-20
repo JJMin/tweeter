@@ -36,21 +36,43 @@ function createTweetElement(tweetData) {
   </div>`;
 }
 
-function renderTweets(tweets) {
-  tweets.forEach(tweet => {
-    $('.tweets').append(createTweetElement(tweet));
-  });
+function renderTweets(tweets, newTweet) {
+  if (newTweet) {
+    $('.tweets').prepend(createTweetElement(tweets[tweets.length - 1]));
+  } else if (!newTweet) {
+    tweets.forEach(tweet => {
+      $('.tweets').prepend(createTweetElement(tweet));
+    });
+  }
 }
 
 $(document).ready(function () {
-  function loadTweets() {
-    console.log('Button clicked, performing ajax call...');
+  function loadTweets(newTweet) {
     $.ajax({
         url: '/tweets',
         method: 'GET'
       })
       .done((tweets) => {
-        renderTweets(tweets);
+        renderTweets(tweets, newTweet);
+        console.log("Rendering tweets");
+      })
+      .fail((error) => {
+        console.log("Error!");
+      })
+      .always(() => {
+        console.log("Function complete.");
+      });
+  };
+
+  function sendTweet(tweet) {
+    $.ajax({
+        url: '/tweets',
+        method: 'POST',
+        data: tweet
+      })
+      .done(() => {
+        loadTweets(newTweet = true);
+        console.log("Loading tweets");
       })
       .fail((error) => {
         console.log("Error!");
@@ -79,10 +101,10 @@ $(document).ready(function () {
     } else if ($("#new_tweet").val().length > 140) {
       alert("You cannot tweet a message that has more than 140 character!");
     } else {
-      $(this).serialize();
+      sendTweet($(this).serialize());
     }
     event.preventDefault();
   });
 
-  loadTweets();
+  loadTweets(newTweet = false);
 });
