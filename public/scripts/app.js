@@ -9,7 +9,7 @@ function createTweetElement(tweetData) {
     <header class="rounded-top">
       <div class="d-flex justify-content-between">
         <div class="align-self-center">
-          <img src="${tweetData.user.avatars.small}" class="img-fluid" alt="Tweeter logo"> 
+          <img src="${tweetData.user.avatars.small}" class="img-fluid rounded-circle" alt="Tweeter logo"> 
           ${tweetData.user.name}
         </div>
         <div class="align-self-center">
@@ -77,6 +77,19 @@ $(document).ready(function () {
         console.log("sendTweet function complete.");
       });
   };
+
+  $("#compose").click(function (event) {
+    event.preventDefault();
+    //$(".new_tweet_container").css("overflow", "visible");
+    $(".new_tweet_container").slideToggle(function() {
+      if ($(this).is(':hidden')) {
+        $(".tweets").css("margin-top", "100px");
+      } else {
+        $("#new_tweet").focus();
+        $(".tweets").css("margin-top", "0");
+      }
+    });
+  });
 
   $("#new_tweet").keyup(function () {
     let tweetLength = $(this).val().length;

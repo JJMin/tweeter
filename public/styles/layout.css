@@ -40,6 +40,12 @@ body {
   height: 80px;
   margin-right: 10px;
 }
+nav form {
+  background-color: inherit;
+}
+nav form button .fa-edit {
+  margin-right: 7px;
+}
 
 /*
  * Main
