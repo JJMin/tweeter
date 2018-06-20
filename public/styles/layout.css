@@ -44,7 +44,7 @@ body {
 /*
  * Main
  */
-main .new_tweet{
+main .new_tweet_container{
   width: 450px;
   margin-top: 80px;
   background-color: white;
