@@ -3,16 +3,21 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 /*
  * Global layout stuff
  */
+
 body {
   margin: 0;
   color: #244751;
@@ -24,25 +29,30 @@ body {
 /*
  * Navbar
  */
- .navbar {
+
+.navbar {
   height: 80px;
   background-color: #00a087;
   padding: 0 2em;
 }
+
 .navbar a {
   color: #e8fdff;
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   letter-spacing: 0.4px;
 }
+
 .navbar img {
   width: 80px;
   height: 80px;
   margin-right: 10px;
 }
+
 nav form {
   background-color: inherit;
 }
+
 nav form button .fa-edit {
   margin-right: 7px;
 }
@@ -54,28 +64,34 @@ nav form button .fa-edit {
 /*
  * Main
  */
-main .new_tweet_container{
+
+main .new_tweet_container {
   width: 450px;
   margin-top: 30px;
   background-color: white;
   padding: 0 15px;
 }
+
 form {
   padding: 20px;
   background-color: rgb(238, 238, 238);
 }
+
 main hr {
   padding: 0px;
   margin: -3px 0 22px 0;
 }
+
 form label {
   font-weight: 700;
   font-size: 22px;
 }
+
 form .form-control {
   font-size: 13px;
   padding-bottom: 25px;
 }
+
 #character-count {
   font-size: 15px;
   font-style: italic;
@@ -85,45 +101,56 @@ form .form-control {
 /*
  * Article
  */
+
 .tweets {
   width: 480px;
 }
+
 .tweet {
   margin: 25px 0;
 }
+
 .tweet header {
   background-color: rgb(243, 243, 243);
   padding: 7px 14px;
 }
+
 .tweet img {
   height: 50px;
   padding-left: 7px;
-} 
+}
+
 .tweet .col-3 {
   padding-top: 10px;
 }
+
 .tweet #tweet_text {
   padding: 35px 14px;
   word-wrap: break-word;
 }
+
 article hr {
   padding: 0;
   margin: 0;
 }
+
 footer p {
   font-size: 13px;
   color: #616161;
   margin-left: 9px;
 }
+
 footer .icons {
   font-size: 16px;
   color: #00a087;
 }
+
 footer .icons i {
   opacity: 0;
   transition: opacity 0.1s linear;
   padding: 0 2px;
 }
+
 .tweet:hover footer .icons i {
   opacity: 1;
 }

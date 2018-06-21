@@ -87,8 +87,7 @@ $(document).ready(function () {
   $("#compose").click(function (event) {
     event.preventDefault();
     $(".new_tweet_container").slideToggle(function () {
-      if ($(this).is(':hidden')) {
-      } else {
+      if ($(this).is(':hidden')) {} else {
         $("#new_tweet").focus();
       }
     });
