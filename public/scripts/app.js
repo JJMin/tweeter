@@ -74,6 +74,7 @@ $(document).ready(function () {
       })
       .done((newTweet) => {
         $('.tweets').prepend(createTweetElement(newTweet));
+        $("#new_tweet").val("");
         console.log("Prepend new tweet.");
       })
       .fail((error) => {
