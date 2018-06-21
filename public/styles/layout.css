@@ -82,9 +82,14 @@ main hr {
   margin: -3px 0 22px 0;
 }
 
-form label {
+form h2 {
+  padding-bottom: 10px;
   font-weight: 700;
   font-size: 22px;
+}
+
+form .errorMessage {
+  font-size: 13px;
 }
 
 form .form-control {

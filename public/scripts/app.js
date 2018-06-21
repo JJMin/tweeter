@@ -122,10 +122,10 @@ $(document).ready(function () {
     const errorMessage = formValidation("#new_tweet");
 
     if (errorMessage) {
-      $(".errorMessage").empty();
-      $(".errorMessage").append(errorMessage);
+      $(".errorMessage").empty().removeClass("alert alert-danger");
+      $(".errorMessage").append(errorMessage).addClass("alert alert-danger");
     } else {
-      $(".errorMessage").empty();
+      $(".errorMessage").empty().removeClass("alert alert-danger");
       sendTweet($(this).serialize());
     }
 
