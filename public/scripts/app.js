@@ -3,6 +3,10 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
+/**
+ * Escape function to prevent cross-site scripting (XSS)
+ */
 function escape(str) {
   var div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
@@ -104,6 +108,9 @@ $(document).ready(function () {
     });
   });
 
+  /**
+   * Character counter function
+   */
   $("#new_tweet").keyup(function () {
     const tweetLength = $(this).val().length;
     const characterNumber = $('#character-count').text();
@@ -118,6 +125,9 @@ $(document).ready(function () {
     $('#character-count').text(maxCharacter - tweetLength);
   });
 
+  /**
+   * On form submission, validates message and if valid, sends POST request with tweet message
+   */
   $(".new_tweet_container form").submit(function (event) {
     const errorMessage = formValidation("#new_tweet");
 
