@@ -148,7 +148,11 @@ footer .icons {
 footer .icons i {
   opacity: 0;
   transition: opacity 0.1s linear;
-  padding: 0 2px;
+  padding: 8px 2px 20px 2px;
+}
+
+footer p {
+  padding-top: 15px;
 }
 
 .tweet:hover footer .icons i {

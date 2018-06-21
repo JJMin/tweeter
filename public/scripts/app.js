@@ -15,11 +15,11 @@ function createTweetElement(tweetData) {
     <header class="rounded-top">
       <div class="d-flex justify-content-between">
         <div class="align-self-center">
-          <img src="${tweetData.user.avatars.small}" class="img-fluid rounded-circle" alt="Tweeter logo"> 
-          ${tweetData.user.name}
+          <img src="${escape(tweetData.user.avatars.small)}" class="img-fluid rounded-circle" alt="Tweeter logo"> 
+          ${escape(tweetData.user.name)}
         </div>
         <div class="align-self-center">
-          ${tweetData.user.handle}
+          ${escape(tweetData.user.handle)}
         </div>
       </div>
     </header>
@@ -29,8 +29,8 @@ function createTweetElement(tweetData) {
 
     <footer>
       <div class="row justify-content-between">
-        <div class="col-3">
-          <p>10 days ago</p>
+        <div class="col-5">
+          <p>${moment(tweetData.created_at).fromNow()}</p>
         </div>
         <div class="col-3 icons">
           <i class="fal fa-flag"></i>
@@ -84,36 +84,50 @@ $(document).ready(function () {
       });
   };
 
+  function formValidation(input) {
+    if ($(input).val().length === 0) {
+      return "You cannot tweet an empty message!";
+    } else if ($(input).val().length > 140) {
+      return "You cannot tweet a message that has more than 140 character!";
+    } else {
+      return false;
+    }
+  }
+
   $("#compose").click(function (event) {
     event.preventDefault();
     $(".new_tweet_container").slideToggle(function () {
-      if ($(this).is(':hidden')) {} else {
+      if ($(this).is(':visible')) {
         $("#new_tweet").focus();
       }
     });
   });
 
   $("#new_tweet").keyup(function () {
-    let tweetLength = $(this).val().length;
-    let characterNumber = $('#character-count').text();
+    const tweetLength = $(this).val().length;
+    const characterNumber = $('#character-count').text();
+    const maxCharacter = 140;
 
-    if (tweetLength > 140) {
+    if (tweetLength > maxCharacter) {
       $('#character-count').css('color', 'red');
     } else {
       $('#character-count').css('color', 'black');
     }
 
-    $('#character-count').text(140 - tweetLength);
+    $('#character-count').text(maxCharacter - tweetLength);
   });
 
   $(".new_tweet_container form").submit(function (event) {
-    if ($("#new_tweet").val().length === 0) {
-      alert("You cannot tweet an empty message!");
-    } else if ($("#new_tweet").val().length > 140) {
-      alert("You cannot tweet a message that has more than 140 character!");
+    const errorMessage = formValidation("#new_tweet");
+
+    if (errorMessage) {
+      $(".errorMessage").empty();
+      $(".errorMessage").append(errorMessage);
     } else {
+      $(".errorMessage").empty();
       sendTweet($(this).serialize());
     }
+
     event.preventDefault();
   });
 
