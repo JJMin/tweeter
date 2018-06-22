@@ -12,7 +12,7 @@
     crossorigin="anonymous">
 
   <!-- App CSS -->
-  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/main.css" type="text/css" />
 
   <!-- External JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -38,7 +38,7 @@
       <img src="/images/bird.png" alt="Tweeter logo"> Tweeter
     </a>
     <form class="form-inline my-2 my-lg-0">
-      <button class="btn btn-primary my-2 my-sm-0" id="compose" type="submit">
+      <button class="btn my-2 my-sm-0" id="compose" type="submit">
         <i class="fal fa-edit"></i>Compose</button>
     </form>
   </nav>
@@ -48,15 +48,16 @@
   <!-- Page-specific (main) content here -->
   <main>
     <div class="container new_tweet_container">
-      <form method="POST" action="/tweets" class="border rounded">
+      <form method="POST" action="/tweets" class="rounded">
         <div class="form-group">
-          <h2 class="border-bottom">Compose Tweet</h2>
+          <h2>What’s happening?</h2>
+          <hr>
           <div><p class="errorMessage" role="alert"></p></div>
           <textarea class="form-control" id="new_tweet" name="text" type="text" placeholder="What are you humming about?"></textarea>
         </div>
         <div class="row justify-content-between">
           <div class="col-4">
-            <button type="submit" class="btn btn-primary">Tweet</button>
+            <button type="submit" class="btn">Tweet</button>
           </div>
           <div class="col-2">
             <p id="character-count">140</p>

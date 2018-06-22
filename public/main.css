@@ -1,9 +1,3 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
-
 html {
   box-sizing: border-box;
 }
@@ -17,28 +11,30 @@ html {
 /*
  * Global layout stuff
  */
-
 body {
   margin: 0;
-  color: #244751;
-  background-color: rgb(255, 255, 255);
-  font-family: 'Open Sans', sans-serif;
+  background-color: #d6e6f2;
+  font: 100% "Open Sans", sans-serif;
   font-weight: 400;
+}
+
+button {
+  background-color: #355c7d !important;
+  color: #d6e6f2;
 }
 
 /*
  * Navbar
  */
-
 .navbar {
   height: 80px;
-  background-color: #00a087;
+  background-color: #f7fbfc;
   padding: 0 2em;
 }
 
 .navbar a {
-  color: #e8fdff;
-  font-family: 'Poppins', sans-serif;
+  color: #355c7d;
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   letter-spacing: 0.4px;
 }
@@ -46,7 +42,7 @@ body {
 .navbar img {
   width: 80px;
   height: 80px;
-  margin-right: 10px;
+  margin-right: 3px;
 }
 
 nav form {
@@ -64,17 +60,15 @@ nav form button .fa-edit {
 /*
  * Main
  */
-
 main .new_tweet_container {
   width: 450px;
   margin-top: 30px;
-  background-color: white;
   padding: 0 15px;
 }
 
 form {
   padding: 20px;
-  background-color: rgb(238, 238, 238);
+  background-color: #b9d7ea;
 }
 
 main hr {
@@ -85,7 +79,8 @@ main hr {
 form h2 {
   padding-bottom: 10px;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 21px;
+  color: #355c7d;
 }
 
 form .errorMessage {
@@ -101,28 +96,30 @@ form .form-control {
   font-size: 15px;
   font-style: italic;
   padding-top: 7px;
+  color: #355c7d;
 }
 
 /*
  * Article
  */
-
 .tweets {
   width: 480px;
 }
 
 .tweet {
   margin: 25px 0;
+  padding: 6px 6px 0 6px;
+  color: #355c7d;
+  background-color: #b9d7ea;
 }
 
 .tweet header {
-  background-color: rgb(243, 243, 243);
   padding: 7px 14px;
 }
 
 .tweet img {
   height: 50px;
-  padding-left: 7px;
+  padding: 0 5px;
 }
 
 .tweet .col-3 {
@@ -141,13 +138,13 @@ article hr {
 
 footer p {
   font-size: 13px;
-  color: #616161;
+  color: #355c7d;
   margin-left: 9px;
 }
 
 footer .icons {
   font-size: 16px;
-  color: #00a087;
+  color: #355c7d;
 }
 
 footer .icons i {
@@ -163,3 +160,5 @@ footer p {
 .tweet:hover footer .icons i {
   opacity: 1;
 }
+
+/*# sourceMappingURL=main.css.map */

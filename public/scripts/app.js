@@ -15,7 +15,7 @@ function escape(str) {
 
 function createTweetElement(tweetData) {
   return tweetElement =
-    `<div class="tweet border rounded">
+    `<div class="tweet rounded">
     <header class="rounded-top">
       <div class="d-flex justify-content-between">
         <div class="align-self-center">
@@ -117,9 +117,9 @@ $(document).ready(function () {
     const maxCharacter = 140;
 
     if (tweetLength > maxCharacter) {
-      $('#character-count').css('color', 'red');
+      $('#character-count').css('color', '#f73859');
     } else {
-      $('#character-count').css('color', 'black');
+      $('#character-count').css('color', '#355c7d');
     }
 
     $('#character-count').text(maxCharacter - tweetLength);
