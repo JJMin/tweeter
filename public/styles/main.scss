@@ -1,10 +1,11 @@
-$title-font: 'Poppins', sans-serif;
-$body-font: 'Open Sans', sans-serif;
+$title-font: 'Poppins',
+sans-serif;
+$body-font: 'Open Sans',
+sans-serif;
 $navbar-color: #f7fbfc;
 $body-color: #d6e6f2;
 $form-color: #b9d7ea;
 $font-color: #355c7d;
-
 html {
   box-sizing: border-box;
 }
@@ -39,27 +40,24 @@ button {
   height: 80px;
   background-color: $navbar-color;
   padding: 0 2em;
-}
-
-.navbar a {
-  color: $font-color;
-  font-family: $title-font;
-  font-weight: 500;
-  letter-spacing: 0.4px;
-}
-
-.navbar img {
-  width: 80px;
-  height: 80px;
-  margin-right: 3px;
+  a {
+    color: $font-color;
+    font-family: $title-font;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+  }
+  img {
+    width: 80px;
+    height: 80px;
+    margin-right: 3px;
+  }
 }
 
 nav form {
   background-color: inherit;
-}
-
-nav form button .fa-edit {
-  margin-right: 7px;
+  button .fa-edit {
+    margin-right: 7px;
+  }
 }
 
 .whitespace {
@@ -70,36 +68,34 @@ nav form button .fa-edit {
  * Main
  */
 
-main .new_tweet_container {
-  width: 450px;
-  margin-top: 30px;
-  padding: 0 15px;
+main {
+  .new_tweet_container {
+    width: 450px;
+    margin-top: 30px;
+    padding: 0 15px;
+  }
+  hr {
+    padding: 0px;
+    margin: -3px 0 22px 0;
+  }
 }
 
 form {
   padding: 20px;
   background-color: $form-color;
-}
-
-main hr {
-  padding: 0px;
-  margin: -3px 0 22px 0;
-}
-
-form h2 {
-  padding-bottom: 10px;
-  font-weight: 700;
-  font-size: 21px;
-  color: $font-color
-}
-
-form .errorMessage {
-  font-size: 13px;
-}
-
-form .form-control {
-  font-size: 13px;
-  padding-bottom: 25px;
+  h2 {
+    padding-bottom: 10px;
+    font-weight: 700;
+    font-size: 21px;
+    color: $font-color
+  }
+  .errorMessage {
+    font-size: 13px;
+  }
+  .form-control {
+    font-size: 13px;
+    padding-bottom: 25px;
+  }
 }
 
 #character-count {
@@ -122,24 +118,20 @@ form .form-control {
   padding: 6px 6px 0 6px;
   color: $font-color;
   background-color: $form-color;
-}
-
-.tweet header {
-  padding: 7px 14px;
-}
-
-.tweet img {
-  height: 50px;
-  padding: 0 5px;
-}
-
-.tweet .col-3 {
-  padding-top: 10px;
-}
-
-.tweet #tweet_text {
-  padding: 35px 14px;
-  word-wrap: break-word;
+  header {
+    padding: 7px 14px;
+  }
+  img {
+    height: 50px;
+    padding: 0 5px;
+  }
+  .col-3 {
+    padding-top: 10px;
+  }
+  #tweet_text {
+    padding: 35px 14px;
+    word-wrap: break-word;
+  }
 }
 
 article hr {
@@ -147,27 +139,35 @@ article hr {
   margin: 0;
 }
 
-footer p {
-  font-size: 13px;
+footer {
   color: $font-color;
-  margin-left: 9px;
+  .row {
+    padding-top: 10px;
+  }
+  .created-at {
+    font-size: 13px;
+    margin-left: 9px;
+  }
+  .icons {
+    font-size: 16px;
+    margin-right: -20px;
+  }
+  .icons i {
+    opacity: 0;
+    transition: opacity 0.1s linear;
+    padding-right: 2px;
+  }
+  .icon-text {
+    display: inline;
+    font: $body-font;
+    font-size: 13px;
+    opacity: 0;
+    transition: opacity 0.1s linear;
+    padding-right: 7px;
+  }
 }
 
-footer .icons {
-  font-size: 16px;
-  color: $font-color;
-}
-
-footer .icons i {
-  opacity: 0;
-  transition: opacity 0.1s linear;
-  padding: 8px 2px 20px 2px;
-}
-
-footer p {
-  padding-top: 15px;
-}
-
-.tweet:hover footer .icons i {
+.tweet:hover footer .icons i,
+.tweet:hover .icon-text {
   opacity: 1;
 }

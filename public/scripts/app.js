@@ -19,7 +19,7 @@ function createTweetElement(tweetData) {
     <header class="rounded-top">
       <div class="d-flex justify-content-between">
         <div class="align-self-center">
-          <img src="${escape(tweetData.user.avatars.small)}" class="img-fluid rounded-circle" alt="Tweeter logo"> 
+          <img src="${escape(tweetData.user.avatars.small)}" class="img-fluid rounded-circle avatar" alt="Tweeter logo"> 
           ${escape(tweetData.user.name)}
         </div>
         <div class="align-self-center">
@@ -34,12 +34,12 @@ function createTweetElement(tweetData) {
     <footer>
       <div class="row justify-content-between">
         <div class="col-5">
-          <p>${moment(tweetData.created_at).fromNow()}</p>
+          <p class="created-at">${moment(tweetData.created_at).fromNow()}</p>
         </div>
-        <div class="col-3 icons">
+        <div class="col-5 icons">
           <i class="fal fa-flag"></i>
-          <i class="far fa-retweet-alt"></i>
-          <i class="fal fa-heart"></i>
+          <i class="far fa-retweet-alt"></i><p class="icon-text">377K</p>
+          <i class="fal fa-heart"></i><p class="icon-text">1.5M</p>
         </div>
       </div>
     </footer>

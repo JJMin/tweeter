@@ -31,14 +31,12 @@ button {
   background-color: #f7fbfc;
   padding: 0 2em;
 }
-
 .navbar a {
   color: #355c7d;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   letter-spacing: 0.4px;
 }
-
 .navbar img {
   width: 80px;
   height: 80px;
@@ -48,7 +46,6 @@ button {
 nav form {
   background-color: inherit;
 }
-
 nav form button .fa-edit {
   margin-right: 7px;
 }
@@ -65,28 +62,24 @@ main .new_tweet_container {
   margin-top: 30px;
   padding: 0 15px;
 }
-
-form {
-  padding: 20px;
-  background-color: #b9d7ea;
-}
-
 main hr {
   padding: 0px;
   margin: -3px 0 22px 0;
 }
 
+form {
+  padding: 20px;
+  background-color: #b9d7ea;
+}
 form h2 {
   padding-bottom: 10px;
   font-weight: 700;
   font-size: 21px;
   color: #355c7d;
 }
-
 form .errorMessage {
   font-size: 13px;
 }
-
 form .form-control {
   font-size: 13px;
   padding-bottom: 25px;
@@ -112,20 +105,16 @@ form .form-control {
   color: #355c7d;
   background-color: #b9d7ea;
 }
-
 .tweet header {
   padding: 7px 14px;
 }
-
 .tweet img {
   height: 50px;
   padding: 0 5px;
 }
-
 .tweet .col-3 {
   padding-top: 10px;
 }
-
 .tweet #tweet_text {
   padding: 35px 14px;
   word-wrap: break-word;
@@ -136,28 +125,36 @@ article hr {
   margin: 0;
 }
 
-footer p {
-  font-size: 13px;
+footer {
   color: #355c7d;
+}
+footer .row {
+  padding-top: 10px;
+}
+footer .created-at {
+  font-size: 13px;
   margin-left: 9px;
 }
-
 footer .icons {
   font-size: 16px;
-  color: #355c7d;
+  margin-right: -20px;
 }
-
 footer .icons i {
   opacity: 0;
   transition: opacity 0.1s linear;
-  padding: 8px 2px 20px 2px;
+  padding-right: 2px;
+}
+footer .icon-text {
+  display: inline;
+  font: "Open Sans", sans-serif;
+  font-size: 13px;
+  opacity: 0;
+  transition: opacity 0.1s linear;
+  padding-right: 7px;
 }
 
-footer p {
-  padding-top: 15px;
-}
-
-.tweet:hover footer .icons i {
+.tweet:hover footer .icons i,
+.tweet:hover .icon-text {
   opacity: 1;
 }
 
